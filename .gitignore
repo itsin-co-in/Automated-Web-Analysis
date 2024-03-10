@@ -1,0 +1,8 @@
+myenv
+.vscode
+
+setup*
+
+fetcher/sportscraper/garbage
+fetcher/sportscraper/__pycache__
+

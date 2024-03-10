@@ -2,6 +2,11 @@
 ## Overview
 This project aims to build an application for tracking sports news from various sources using Python spiders, Spring Boot server, Kafka, and Java consumer applications. The system architecture involves crawling sports news websites, processing the data, and distributing it to multiple consumer applications for further analysis or display.
 
+## Requirements
+1. Java 17
+2. scrapy
+3. Kafka Server and Zookeeper 
+
 ## Components
 1. **Python Spiders**
 Python spiders are responsible for crawling various sports news websites, such as Google searches.
@@ -19,25 +24,33 @@ Topics are consumed by Java consumer applications for further processing.
 Java consumer applications subscribe to specific Kafka topics.
 They consume sports news data published by Kafka in real-time.
 Consumer applications may perform additional processing, analysis, or storage of the data.
-## Authentication and Security
-Kafka ACLs (Access Control Lists) can be used to control access to topics, ensuring only authorized consumer applications can consume specific data.
-Custom authentication mechanisms can be implemented within Java consumer applications to authenticate with Kafka.
-Secure communication protocols like SSL/TLS can be employed to encrypt data transmission between components, enhancing overall system security.
+
 ## Usage
 To run the system locally, follow these steps:
 
 * Start Kafka and Zookeeper servers.
+```shell
+${path/to/kafka}bin/zookeeper-server-start.sh config/zookeeper.properties
+${path/to/kafka}bin/kafka-server-start.sh config/server.properties
+```
+
 * Run the Spring Boot server.
+```shell
+cd server
+mvn spring-boot:run
+```
+
 * Deploy and run the Python spiders to crawl sports news websites.
+```shell
+cd fetcher/sportscraper
+scarpy crawl nbascraper
+```
 * Launch the Java consumer applications to subscribe to Kafka topics and consume data.
+```shell
+cd client
+mvn spring-boot:run
+```
 
-## Contributing
-Contributions are welcome! If you'd like to contribute to this project, please follow these guidelines:
-
-* Fork the repository.
-* Create a new branch for your feature or bug fix.
-* Make your changes and test them thoroughly.
-* Submit a pull request detailing the changes you've made.
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
