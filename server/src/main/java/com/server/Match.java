@@ -11,10 +11,10 @@ public class Match implements Serializable {
     private String team2;
     private String score1;
     private String score2;
-
+    private String game;
     @Override
     public String toString(){
-        return "Team1: "+ team1 + " " + score1 + "\nTeam2: " + team2+ " " + score2;
+        return "Game : " + game +  "\nTeam1: "+ team1 + " " + score1 + "\nTeam2: " + team2+ " " + score2;
     }
 
     public void setTeam1(String team1) {
@@ -39,5 +39,13 @@ public class Match implements Serializable {
 
     public String getTeam2() {
         return team2;
+    }
+
+    public String getGame() {
+        return game;
+    }
+
+    public void setGame(String game) {
+        this.game = game.toLowerCase();
     }
 }

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/nba")
+@RequestMapping("/games")
 public class Controller {
 
     @Autowired
@@ -16,10 +16,10 @@ public class Controller {
     @PostMapping("/matches")
     public ResponseEntity<?> processMatch(@RequestBody Match match){
 
-        if (! this.kafkaProducer.sendTopicMessage("nba"+match.getTeam1(),match.toString())) {
+        if (! this.kafkaProducer.sendTopicMessage(match.getGame()+match.getTeam1(),match.toString())) {
             System.out.println("Error: message not sent");
         }
-        if (! this.kafkaProducer.sendTopicMessage("nba"+match.getTeam2(),match.toString())) {
+        if (! this.kafkaProducer.sendTopicMessage(match.getGame()+match.getTeam2(),match.toString())) {
             System.out.println("Error: message not sent");
         }
       return ResponseEntity.ok().build();

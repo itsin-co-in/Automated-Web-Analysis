@@ -4,5 +4,5 @@ myenv
 setup*
 
 fetcher/sportscraper/garbage
-fetcher/sportscraper/__pycache__
-
+**/__pycache__
+**/__pycache__
