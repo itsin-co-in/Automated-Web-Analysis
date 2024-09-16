@@ -30,8 +30,7 @@ To run the system locally, follow these steps:
 
 * Start Kafka and Zookeeper servers.
 ```shell
-${path/to/kafka}bin/zookeeper-server-start.sh config/zookeeper.properties
-${path/to/kafka}bin/kafka-server-start.sh config/server.properties
+docker run -p 9092:9092 apache/kafka:3.8.0
 ```
 
 * Run the Spring Boot server.
@@ -45,7 +44,7 @@ mvn spring-boot:run
 cd fetcher/sportscraper
 scarpy crawl nbascraper
 ```
-* Launch the Java consumer applications to subscribe to Kafka topics and consume data.
+* Launch the Java consumer applications to subscribe to Kafka topics and consume data. We can change the topics in the application.properties file.
 ```shell
 cd client
 mvn spring-boot:run
