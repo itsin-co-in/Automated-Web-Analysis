@@ -1,15 +1,19 @@
 # Website Architecture Analysis Workbook based on Sports News Tracker
+
 ## Overview in progress
+
 iTS objective from this project is to build an application for Website Architecture Analysis Workbook from a base URL using Python spiders, Spring Boot server, Kafka, and Java consumer applications. The original system architecture involves crawling sports news websites, processing the data, and distributing it to multiple consumer applications for further analysis or display.
 
 Dev team must restructure this project to the bespoke specs.
 
 ## Requirements
+
 1. Java 17
 2. scrapy
-3. Kafka Server and Zookeeper 
+3. Kafka Server and Zookeeper
 
 ## Components
+
 1. **Python Spiders**
 Python spiders are responsible for crawling various sports news websites, such as Google searches.
 They extract relevant information such as headlines, articles, and metadata.
@@ -28,30 +32,36 @@ They consume sports news data published by Kafka in real-time.
 Consumer applications may perform additional processing, analysis, or storage of the data.
 
 ## Usage
+
 To run the system locally, follow these steps:
 
 * Start Kafka and Zookeeper servers.
+
 ```shell
 docker run -p 9092:9092 apache/kafka:3.8.0
 ```
 
 * Run the Spring Boot server.
+
 ```shell
 cd server
 mvn spring-boot:run
 ```
 
 * Deploy and run the Python spiders to crawl sports news websites.
+
 ```shell
 cd fetcher/sportscraper
 scarpy crawl nbascraper
 ```
+
 * Launch the Java consumer applications to subscribe to Kafka topics and consume data. We can change the topics in the application.properties file.
+
 ```shell
 cd client
 mvn spring-boot:run
 ```
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
+This project is licensed under the MIT License - see the LICENSE file for details.
