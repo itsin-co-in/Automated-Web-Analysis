@@ -1,3 +1,12 @@
+===- 
+   Go fast towards template creation in Mautic
+
+   pip install --upgrade pip
+
+   pip install pandas lighthouse selenium BeautifulSoup4 cssutils playwright
+
+   pip install cssutils playwright
+
 ===- 05, 061124
 
 Input to gemini:
