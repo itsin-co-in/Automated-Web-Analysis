@@ -1,4 +1,5 @@
-# Sports News Tracker
+# Website Architecture Analysis Workbook
+
 ## Overview
 This project aims to build an application for tracking sports news from various sources using Python spiders and other Python packages.
 
