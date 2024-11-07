@@ -16,6 +16,23 @@
 
 export CHROME_PATH=/usr/bin/chromium-browser
 
+babel-node lighthouse-report.js
+
+
+import lighthouse from 'lighthouse';
+import chromeLauncher from 'chrome-launcher';
+
+async function runLighthouse(url) {
+  try {
+    const lighthouse = await import('lighthouse');
+    const chromeLauncher = await import('chrome-launcher');
+    // Rest of the code remains the same
+  } catch (err) {
+    console.error('Lighthouse error:', err);
+    throw err;
+  }
+}
+
 
 ===- 05, 061124
 
