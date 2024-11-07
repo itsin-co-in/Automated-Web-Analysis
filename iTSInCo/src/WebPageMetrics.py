@@ -1,5 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
+import pandas as pd
+#from lighthouse import LighthouseRunner
 import time
 from urllib.parse import urljoin
 import concurrent.futures
