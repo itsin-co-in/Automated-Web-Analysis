@@ -10,6 +10,13 @@
 
    pip install cssutils playwright
 
+      > Lighthouse package from pip is not working.
+
+   npm install -g lighthouse
+
+export CHROME_PATH=/usr/bin/chromium-browser
+
+
 ===- 05, 061124
 
 Input to gemini:
