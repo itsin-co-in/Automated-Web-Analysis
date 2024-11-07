@@ -1,6 +1,5 @@
 ===- 05, 061124
 
-
 Input to gemini:
 
 1. Q:
@@ -16,50 +15,51 @@ A:  Java 17 is more capable then this OpenJDK.
 
 2. How to install JRE 17 as a primary runtime for my project that is running on gitpod?
 
-A: 
+A:
 
-	Website Architecture Analysis Workbook
-	
-	+:--- Cann't pay for APIs
-	https://github.com/its4cs/AI-Investigator/tree/main
+ Website Architecture Analysis Workbook
 
-	created .env file 
+ +:--- Cann't pay for APIs
+ <https://github.com/its4cs/AI-Investigator/tree/main>
 
-		ANTHROPIC_API_KEY=
-		FIRECRAWL_API_KEY=your_firecrawl_api_key
+ created .env file
 
-	+:---
+  ANTHROPIC_API_KEY=
+  FIRECRAWL_API_KEY=your_firecrawl_api_key
 
-	For automating website architecture analysis, Python would be the most suitable language due to its extensive libraries and tools for web automation and analysis. Let me create a practical implementation guide.
+ +:---
 
+ For automating website architecture analysis, Python would be the most suitable language due to its extensive libraries and tools for web automation and analysis. Let me create a practical implementation guide.
 
-	This Python implementation offers several advantages:
+ This Python implementation offers several advantages:
 
-	1. **Rich Ecosystem**:
-	   - BeautifulSoup for HTML parsing
-	   - Selenium for dynamic content analysis
-	   - Playwright for performance testing
-	   - Requests for HTTP analysis
-	   - cssutils for CSS analysis
+ 1. **Rich Ecosystem**:
+    - BeautifulSoup for HTML parsing
+    - Selenium for dynamic content analysis
+    - Playwright for performance testing
+    - Requests for HTTP analysis
+    - cssutils for CSS analysis
 
-	2. **Key Features**:
-	   - Automated DOM structure analysis
-	   - CSS and design system analysis
-	   - API endpoint detection
-	   - Performance metrics collection
-	   - Security header analysis
-	   - Accessibility checking
-	   - Multiple report formats (JSON, HTML, Excel)
+ 2. **Key Features**:
+    - Automated DOM structure analysis
+    - CSS and design system analysis
+    - API endpoint detection
+    - Performance metrics collection
+    - Security header analysis
+    - Accessibility checking
+    - Multiple report formats (JSON, HTML, Excel)
 
-	3. **Required Dependencies**:
-	```bash
-	
-	sudo pip3 install selenium lighthouse-python playwright
-	
-	sudo apt install python3-bs4 python3-requests python3-cssutils python3-pandas 
-	```
+ 3. **Required Dependencies**:
 
-	Would you like me to:
-	1. Add any specific analysis features?
-	2. Explain how to implement particular sections in more detail?
-	3. Create additional modules for specific aspects of the analysis?
+ ```bash
+ 
+ sudo pip3 install selenium lighthouse-python playwright
+ 
+ sudo apt install python3-bs4 python3-requests python3-cssutils python3-pandas 
+ ```
+
+ Would you like me to:
+
+ 1. Add any specific analysis features?
+ 2. Explain how to implement particular sections in more detail?
+ 3. Create additional modules for specific aspects of the analysis?

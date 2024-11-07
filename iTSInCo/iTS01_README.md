@@ -52,7 +52,7 @@ mvn spring-boot:run
 
 ```shell
 cd fetcher/sportscraper
-scarpy crawl nbascraper
+scrapy crawl nbascraper
 ```
 
 * Launch the Java consumer applications to subscribe to Kafka topics and consume data. We can change the topics in the application.properties file.
